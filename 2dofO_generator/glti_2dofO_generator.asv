@@ -30,8 +30,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function ysol = glti_2dofO_generator(m1,m2,k1,k2,c1,c2,T,nt,x0,F,C,...
-                                        promu,prosi,obsmu,obssi,rs)
-    rng(rs) %random seed
+                                        promu,prosi,obsmu,obssi)
+                                    rng(1)
     M=[m1 0;0 m2]; %mass matrix
     K=[k1+k2 -k2; -k2 k2]; %stiffness matrix
     Damp=[c1+c2 -c2; -c2 c2]; % damping matrix
